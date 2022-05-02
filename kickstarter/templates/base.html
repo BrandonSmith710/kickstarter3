@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Kickstarter - {{ title }}</title>
+    <link rel="stylesheet" href="https://unpkg.com/picnic" />
+  </head>
+
+  <body>
+    <article class="flex two" style="padding: 3em 1em;">
+      <!-- {% block content %} -->
+ 
+        <form action="/data" method = "POST">
+          <!-- <p>Blurb <input type = "text" name = "blurb" /></p> -->
+          <p>Name <input type = "text" name = "name" /></p>
+          <p>Blurb<input type = "text" name = "blurb" /></p>
+          <p>Country <input type = "text" name = "country" value='US'/></p>
+          <p>Backers Count <input type = "text" name = "backers_count" /></p>
+          <p><input type = "submit" value = "Submit" /></p>
+      </form>
+
+      </div>
+      <!-- {% endblock %} -->
+    </article>
+  </body>
+
+</html>
