@@ -2,7 +2,6 @@ from keras.models import load_model
 
 model = load_model("../kickstarter3/data/my_model.h5")
 
-
 model.compile(model.compile(loss='binary_crossentropy',
               optimizer='adam',
               metrics=['mse']))
@@ -13,4 +12,3 @@ def user_input(user_campaign):
     return model.predict(X_features)
 
 user_input
-
