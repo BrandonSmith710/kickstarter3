@@ -27,30 +27,15 @@ def create_app():
 
     def preprocessDataAndPredict(name, blurb, country, backers_count):
 
-        # test_data = (blurb)
         test_data = (name, blurb, country, backers_count)
-        # print(test_data)
 
         test_data = np.array(test_data)
         dftest = pd.DataFrame(test_data).T
         dftest.columns = ['name', 'blurb', 'country', 'backers_count']
-        print(dftest)
-        print(dftest.shape)
-
-        # test_data = test_data.reshape(1, -1)
-        # print(test_data)
-
-        #file = open("model.pkl", "wb")
         model = pickle.load(
             open('kickstarter/model_knn', 'rb'))
-        # model = pickle.load(
-        #     open('Kickstarter2/kickstarter/kick_model(1)', 'rb'))
 
         prediction = model.predict(dftest)
-
-        # print(prediction)
-
         return prediction
 
-        # return prediction
     return APP
