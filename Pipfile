@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-<<<<<<< HEAD
 pandas = "*"
 sklearn = "*"
 numpy = "*"
@@ -14,22 +13,8 @@ scikit-learn = "*"
 flask-sqlalchemy = "*"
 python-dotenv = "*"
 keras = "*"
-=======
-requests = "*"
-flask = "*"
-flask-sqlalchemy = "*"
-pandas = "*"
-numpy = "*"
-files = "*"
-gunicorn = "*"
-python-dotenv = "*"
->>>>>>> 8a473ea54917a45681c6a739ab31b3895b3c94fc
 
 [dev-packages]
 
 [requires]
-<<<<<<< HEAD
 python_version = "3.8"
-=======
-python_version = "3.9"
->>>>>>> 8a473ea54917a45681c6a739ab31b3895b3c94fc
