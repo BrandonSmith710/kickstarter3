@@ -3,12 +3,13 @@ import pickle
 import pandas as pd
 
 def create_app():
-    # initializes our app
+
     APP = Flask(__name__)
 
     @APP.route('/')
     def form():
         return render_template('base.html')
+    
     @APP.route('/data/', methods=['GET', 'POST'])
     def data():
 
@@ -18,11 +19,8 @@ def create_app():
             blurb = request.form.get('blurb', 'default')
             country = request.form.get('country', 'default')
             backers_count = request.form.get('backers_count', 'default')
-
             prediction = preprocessDataAndPredict(name, blurb, country,
-                                 backers_count)
-
-            # print(prediction[0])
+                                                  backers_count)
             return render_template('data.html', prediction=prediction[0])
 
     def preprocessDataAndPredict(name, blurb, country, backers_count):
